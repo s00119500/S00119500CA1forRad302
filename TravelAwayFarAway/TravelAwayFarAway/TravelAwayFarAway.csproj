@@ -130,6 +130,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201403222240570_addedGuestSeed.cs" />
+    <Compile Include="Migrations\201403222240570_addedGuestSeed.Designer.cs">
+      <DependentUpon>201403222240570_addedGuestSeed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\All.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -225,6 +229,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201403222240570_addedGuestSeed.resx">
+      <DependentUpon>201403222240570_addedGuestSeed.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
