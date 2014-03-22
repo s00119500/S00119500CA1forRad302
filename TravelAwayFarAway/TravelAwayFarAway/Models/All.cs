@@ -18,6 +18,7 @@ namespace MvcApp.Models
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         public int minimunNumberOfGuests { get; set; } // min amount required to be valid
+        public int currentNumberOfGuests { get; set; } // current amount 
 
         public virtual List<Leg> Leg { get; set; }
         //public List<Guest> totalAssociatedGuests { get; set; }
@@ -33,7 +34,7 @@ namespace MvcApp.Models
         public string legName { get; set; }
         public string startLocation { get; set; } // city name 
         public string endLocation { get; set; }   // city name 
-        public DateTime LegtartDate { get; set; }
+        public DateTime LegStartDate { get; set; }
         public DateTime legEndDate { get; set; }
 
         public virtual List<Guest> LegAssociatedGuests{ get; set; }
