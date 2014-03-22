@@ -29,7 +29,7 @@ namespace MvcApp.Models
         //[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
     
         public int LegId { get; set; }
-        //public int tripId { get; set; }
+        public int tripId { get; set; }
         public string legName { get; set; }
         public string startLocation { get; set; } // city name 
         public string endLocation { get; set; }   // city name 
