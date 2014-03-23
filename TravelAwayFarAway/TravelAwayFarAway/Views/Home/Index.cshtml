@@ -42,6 +42,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.minimunNumberOfGuests)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tripStatus)
+                </th>
                 <th></th>
             </tr>
 
@@ -59,6 +62,9 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.minimunNumberOfGuests)
+                    </td>
+                    <td>
+                        @Html.DisplayNameFor(modelItem => item.tripStatus)
                     </td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.TripId }, new { @class = "btn btn-primary" }) |

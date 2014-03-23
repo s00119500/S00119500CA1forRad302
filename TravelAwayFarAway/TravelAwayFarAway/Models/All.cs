@@ -19,7 +19,7 @@ namespace MvcApp.Models
         public DateTime endDate { get; set; }
         public int minimunNumberOfGuests { get; set; } // min amount required to be valid
         public int currentNumberOfGuests { get; set; } // current amount 
-
+        public string tripStatus { get; set; }
         public virtual List<Leg> Leg { get; set; }
         //public List<Guest> totalAssociatedGuests { get; set; }
     }
