@@ -12,5 +12,6 @@ namespace TravelAwayFarAway.DAL
         IQueryable<Trip> displayTrips();
         IQueryable<Leg> displayLegs();
         IQueryable<Guest> displayGuests();
+        Leg addLeg(Leg l);
     }
 }

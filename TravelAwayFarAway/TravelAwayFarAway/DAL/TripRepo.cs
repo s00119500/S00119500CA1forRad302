@@ -28,5 +28,12 @@ namespace TravelAwayFarAway.DAL
             return context.guest;
         }
 
+        public Leg addLeg(Leg l)
+        {
+            context.leg.Add(l);
+            context.SaveChanges();
+            return l;
+        }
+
     }
 }

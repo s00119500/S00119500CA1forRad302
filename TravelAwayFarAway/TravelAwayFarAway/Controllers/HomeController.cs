@@ -13,17 +13,40 @@ namespace TravelAwayFarAway.Controllers
     public class HomeController : Controller
     {
         private ContextClass db = new ContextClass();
-
+        private InterfaceTripRepo _IR;
+        
+        public HomeController(InterfaceTripRepo ir) //need to make iterface public
+        {
+            _IR = ir;
+        }
         //
         // GET: /Home/
 
         public ActionResult Index()
-        {
-            return View(db.trip.ToList());
+        { 
+
+            return View(_IR.displayTrips());
         }
 
-        //
-        // GET: /Home/Details/5
+        public ActionResult addLeg() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult addLeg(Leg l)
+        {
+            if (ModelState.IsValid)
+            {
+                db.leg.Add(l);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(l);
+        }
+
 
         public ActionResult Details(int id = 0)
         {

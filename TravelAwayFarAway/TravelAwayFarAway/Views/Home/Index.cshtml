@@ -64,14 +64,22 @@
                         @Html.DisplayFor(modelItem => item.minimunNumberOfGuests)
                     </td>
                     <td>
-                        @Html.DisplayNameFor(modelItem => item.tripStatus)
+                        @if (item.minimunNumberOfGuests > item.currentNumberOfGuests)
+                        {
+                            item.tripStatus = String.Format("trip cannot proceed with vacancies available");   
+                        }
+                        @if (item.minimunNumberOfGuests < item.currentNumberOfGuests)
+                        {
+                            item.tripStatus = String.Format("trips good to go");
+                        }
+                        @*@Html.DisplayNameFor(modelItem => item.tripStatus)*@
                     </td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.TripId }, new { @class = "btn btn-primary" }) |
                         @Html.ActionLink("Details", "Details", new { id = item.TripId }, new { @class = "btn btn-info" }) |
                         @Html.ActionLink("Delete", "Delete", new { id = item.TripId }, new { @class = "btn btn-danger" }) |
                         @Html.ActionLink("Add a Leg", "addLeg", new { id = item.TripId }, new { @class = "btn btn-success" }) |
-                        @Html.ActionLink("Join a Leg", "joinLeg", new { id = item.TripId, legId = item.Leg }, new { @class = "btn btn-info" })
+                        @Html.ActionLink("Join a Leg", "addGuest", new { id = item.TripId, legId = item.Leg }, new { @class = "btn btn-info" })
 
                     </td>
                 </tr>
