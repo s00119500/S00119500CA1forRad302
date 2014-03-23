@@ -15,27 +15,28 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.name)
     </div>
-
+    <br />
     <div class="display-label">
          @Html.DisplayNameFor(model => model.startDate)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.startDate)
     </div>
-
+    <br />
     <div class="display-label">
          @Html.DisplayNameFor(model => model.endDate)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.endDate)
     </div>
-
+    <br />
     <div class="display-label">
          @Html.DisplayNameFor(model => model.minimunNumberOfGuests)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.minimunNumberOfGuests)
     </div>
+    <br />
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.TripId }, new {@class="btn btn-success" }) |

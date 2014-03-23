@@ -10,11 +10,28 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/toastr.js"></script>
 </head>
 <body>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
+    @*<<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                <li><a href="#trips" data-toggle="tab">View Trips</a></li>
+                <li><a href="#legs" data-toggle="tab">Legs</a></li>
+
+            </ul>*@
+            @*<a class="brand" href="#" title="change in _bootstrapLayout.basic.cshtml">Application Name</a>*@
+            @*<div class="nav-collapse collapse">
+                          @Html.Navigation()
+                    </div>
+            </div>
+        </div>
+    </div>       *@ 
 </body>
 </html>
