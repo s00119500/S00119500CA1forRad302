@@ -27,20 +27,20 @@ namespace TravelAwayFarAway.Migrations
             context.SaveChanges();                        ///saves changes
 
             var seededLeg = new List<Leg> {
-                new Leg{ legName="Tunisan Road", tripId=1, LegtartDate=DateTime.Parse("1/12/2015"),legEndDate=DateTime.Parse("7/12/2015"),
+                new Leg{ legName="Tunisan Road", tripId=1, LegStartDate=DateTime.Parse("1/12/2015"),legEndDate=DateTime.Parse("7/12/2015"),
                         startLocation="Gabes",endLocation="Gadamis"},
-                new Leg{ legName="Gadamis Straight", tripId=1, LegtartDate=DateTime.Parse("8/12/2015"),legEndDate=DateTime.Parse("10/12/2015"),
+                new Leg{ legName="Gadamis Straight", tripId=1, LegStartDate=DateTime.Parse("8/12/2015"),legEndDate=DateTime.Parse("10/12/2015"),
                         startLocation="Gadamis",endLocation="Tassilì National Park"},
-                new Leg{ legName="Home Run", tripId=1, LegtartDate=DateTime.Parse("12/12/2015"),legEndDate=DateTime.Parse("13/12/2015"),
+                new Leg{ legName="Home Run", tripId=1, LegStartDate=DateTime.Parse("12/12/2015"),legEndDate=DateTime.Parse("13/12/2015"),
                         startLocation="Tassilì National Park",endLocation="Gabis"},
 
-                new Leg{ legName="Dublin Away", tripId=2, LegtartDate=DateTime.Parse("8/12/2015"),legEndDate=DateTime.Parse("10/12/2015"),
+                new Leg{ legName="Dublin Away", tripId=2, LegStartDate=DateTime.Parse("8/12/2015"),legEndDate=DateTime.Parse("10/12/2015"),
                         startLocation="Dublin",endLocation="Offally"},
-                new Leg{ legName="Out of Offally", tripId=2, LegtartDate=DateTime.Parse("10/12/2015"),legEndDate=DateTime.Parse("12/12/2015"),
+                new Leg{ legName="Out of Offally", tripId=2, LegStartDate=DateTime.Parse("10/12/2015"),legEndDate=DateTime.Parse("12/12/2015"),
                         startLocation="Offally",endLocation="Connemara"},
-                new Leg{ legName="Connemaran Potholes", tripId=2, LegtartDate=DateTime.Parse("1/12/2015"),legEndDate=DateTime.Parse("7/12/2015"),
+                new Leg{ legName="Connemaran Potholes", tripId=2, LegStartDate=DateTime.Parse("1/12/2015"),legEndDate=DateTime.Parse("7/12/2015"),
                         startLocation="Connemara",endLocation="Connemara"},// lot o potholes
-                new Leg{ legName="Home Run", tripId=2, LegtartDate=DateTime.Parse("1/12/2015"),legEndDate=DateTime.Parse("7/12/2015"),
+                new Leg{ legName="Home Run", tripId=2, LegStartDate=DateTime.Parse("1/12/2015"),legEndDate=DateTime.Parse("7/12/2015"),
                         startLocation="Connemara",endLocation="Dublin"}
 
             };// end seededLeg

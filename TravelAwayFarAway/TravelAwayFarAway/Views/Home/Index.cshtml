@@ -3,13 +3,15 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+@*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />*@
+<h2>Get Going </h2>
 
 <p>
     @Html.ActionLink("Create a new Trip", "Create")
 </p>
-<table>
+<table class="table table-responsive">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.name)
@@ -43,7 +45,10 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.TripId }, new { @class= "btn btn-primary"}) |
             @Html.ActionLink("Details", "Details", new { id = item.TripId }, new { @class = "btn btn-info" }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.TripId }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.TripId }, new { @class = "btn btn-danger" }) |
+            @Html.ActionLink("Add a Leg", "addLeg", new { id = item.TripId }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Join a Leg", "joinLeg", new { id = item.TripId,legId = item.Leg }, new { @class = "btn btn-info" }) 
+
         </td>
     </tr>
 }

@@ -20,7 +20,7 @@
             @Html.EditorFor(model => model.name)
             @Html.ValidationMessageFor(model => model.name)
         </div>
-
+        <br />
         <div class="editor-label">
             @Html.LabelFor(model => model.startDate)
         </div>
@@ -28,7 +28,7 @@
             @Html.EditorFor(model => model.startDate)
             @Html.ValidationMessageFor(model => model.startDate)
         </div>
-
+        <br />
         <div class="editor-label">
             @Html.LabelFor(model => model.endDate)
         </div>
@@ -36,7 +36,7 @@
             @Html.EditorFor(model => model.endDate)
             @Html.ValidationMessageFor(model => model.endDate)
         </div>
-
+        <br />
         <div class="editor-label">
             @Html.LabelFor(model => model.minimunNumberOfGuests)
         </div>
@@ -44,15 +44,15 @@
             @Html.EditorFor(model => model.minimunNumberOfGuests)
             @Html.ValidationMessageFor(model => model.minimunNumberOfGuests)
         </div>
-
+        <br />
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Create" class="btn btn-success" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", new {@class="btn btn-info" })
 </div>
 
 @section Scripts {
